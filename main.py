@@ -18,7 +18,6 @@ from PIL import Image, ImageFont, ImageDraw
 # ----------------------------------------------------------------------------
 def get_author_fullname(file):
     """Getting image author name and surname."""
-    print("-"*80)
     v_fullename = str(os.path.basename(file))
     v_filename = v_fullename[:v_fullename.find('.')]
     v_author = v_filename.split('-')
@@ -58,7 +57,6 @@ def image_operation(file, info):
                font=font)
 
     # Saving new image fime on defult '\output-images' directory
-    print(final_directory + '\\' + get_author_fullname(file)[0])
     img.save(final_directory + '\\' + get_author_fullname(file)[0], "JPEG")
 
     return None
